@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>WebDev Quiz | Test Your Skills</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="app-container">
+      <!-- Welcome Screen -->
+      <section id="welcome-screen" class="screen active">
+        <div class="logo">&lt;/&gt; WebDev Quiz</div>
+
+        <h1>Welcome to <span>WebDev Quiz</span></h1>
+
+        <p class="subtitle">
+          Test your basic knowledge of HTML, CSS and JavaScript.
+        </p>
+
+        <div class="feature-box">
+          <div class="feature">
+            <i class="fa-regular fa-clipboard feature-icon"></i>
+            <h3>15 Questions</h3>
+            <p>Multiple Choice</p>
+          </div>
+
+          <div class="feature">
+            <i class="fa-solid fa-chart-simple feature-icon"></i>
+            <h3>Get Your Score</h3>
+            <p>Instant Results</p>
+          </div>
+
+          <div class="feature">
+            <i class="fa-solid fa-laptop-code feature-icon"></i>
+            <h3>Learn & Improve</h3>
+            <p>Review Answers</p>
+          </div>
+        </div>
+
+        <button class="primary-btn" id="start-btn">Start Quiz →</button>
+      </section>
+
+      <!-- User Registration Screen -->
+      <section id="registration-screen" class="screen">
+        <h2>Let's Get Started!</h2>
+
+        <p class="subtitle">Enter your details before starting the quiz.</p>
+
+        <form id="registration-form">
+          <div class="form-group">
+            <label for="username">Full Name</label>
+            <input
+              type="text"
+              id="username"
+              placeholder="Enter your full name"
+              minlength="2"
+              maxlength="60"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="age">Age</label>
+            <input
+              type="number"
+              id="age"
+              placeholder="Enter your age"
+              min="5"
+              max="120"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+              maxlength="254"
+              required
+            />
+          </div>
+
+          <button type="submit" class="primary-btn">Begin Quiz →</button>
+        </form>
+
+        <button class="back-btn" id="back-to-home">← Back to Home</button>
+      </section>
+
+      <!-- Quiz Screen -->
+      <section id="quiz-screen" class="screen">
+        <div class="quiz-header">
+          <h2>WebDev Quiz</h2>
+          <span id="question-counter">Question 1 of 15</span>
+        </div>
+
+        <div class="progress-container">
+          <div id="progress-bar"></div>
+        </div>
+
+        <div class="progress-text" id="progress-text">0% Completed</div>
+
+        <div class="question-card">
+          <span id="question-category" class="category"> HTML </span>
+
+          <h3 id="question-text">Question appears here</h3>
+
+          <div id="options-container"></div>
+        </div>
+
+        <div class="navigation-buttons">
+          <button id="previous-btn" class="secondary-btn">← Previous</button>
+
+          <button id="next-btn" class="primary-btn">Next →</button>
+
+          <button id="submit-btn" class="submit-btn hidden">
+            Submit Quiz ✓
+          </button>
+        </div>
+      </section>
+
+      <!-- Results Screen -->
+      <section id="results-screen" class="screen">
+        <div class="result-icon">🏆</div>
+
+        <h2>Quiz Completed!</h2>
+
+        <p id="result-greeting" class="subtitle">Great job!</p>
+
+        <div class="score-circle">
+          <span id="score-display">0 / 15</span>
+          <small>Your Score</small>
+        </div>
+
+        <div class="result-stats">
+          <div class="stat correct-stat">
+            <h3 id="correct-count">0</h3>
+            <p>Correct</p>
+          </div>
+
+          <div class="stat incorrect-stat">
+            <h3 id="incorrect-count">0</h3>
+            <p>Incorrect</p>
+          </div>
+
+          <div class="stat percentage-stat">
+            <h3 id="percentage-display">0%</h3>
+            <p>Accuracy</p>
+          </div>
+        </div>
+
+        <div class="result-message" id="result-message"></div>
+
+        <button id="review-btn" class="primary-btn">Review Answers</button>
+
+        <button id="retry-btn" class="secondary-btn">↻ Try Again</button>
+
+        <button id="home-btn" class="secondary-btn">⌂ Go to Home</button>
+      </section>
+
+      <!-- Answer Review Screen -->
+      <section id="review-screen" class="screen">
+        <h2>Review Your Answers</h2>
+
+        <p class="subtitle">Check your answers against the correct ones.</p>
+
+        <div id="review-container"></div>
+
+        <button id="review-home-btn" class="primary-btn">
+          Back to Results
+        </button>
+      </section>
+
+      <footer>
+        <p>Made  using HTML, CSS & JavaScript</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
