@@ -110,6 +110,8 @@ Percentage = (Correct Answers / Total Questions) × 100
 ## Author
 
 Developed as a web development practice project using HTML, CSS, and JavaScript.By Muhammad Rayan Asif
+## Live Now 
+("https://smart-webquiz.netlify.app/")
 
 ## License
 
